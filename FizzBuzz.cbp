@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="FizzBuzz" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/FizzBuzz" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/FizzBuzz" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+			<Target title="Aix">
+				<Option output="bin/Release/jlTest" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Aix/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-maix64" />
+					<Add option="-O5" />
+					<Add directory="/opt/pware64/include" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-Wl,-bbigtoc" />
+					<Add option="-maix64" />
+					<Add option="-Wl,-brtl" />
+					<Add directory="/opt/freeware/lib64" />
+				</Linker>
+			</Target>
+			<Target title="utest">
+				<Option output="bin/utest" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/utest" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option host_application="--zipfile test/in/zipin.zip --dirout test/out --dirtmpout test/tmp --log test/tmp/test.log" />
+				<Option run_host_application_in_terminal="0" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-DUTESTRUN" />
+					<Add directory="utest/include" />
+					<Add directory="$(SOCLE_INC)/utestUtils_$(VERS_UTESTUTILS)" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add library="gtest" />
+					<Add library="gtest_main" />
+					<Add library="pthread" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="include/fizzbuzz.h" />
+		<Unit filename="main.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Aix" />
+		</Unit>
+		<Unit filename="src/fizzbuzz.cpp" />
+		<Unit filename="utest/include/utestglob.h" >
+			<Option target="utest" />
+		</Unit>
+		<Unit filename="utest/main.cpp" >
+			<Option target="utest" />
+		</Unit>
+		<Unit filename="utest/src/T01_FizzBuzzDoit.cpp" >
+			<Option target="utest" />
+		</Unit>
+		<Extensions />
+	</Project>
+</CodeBlocks_project_file>
