@@ -29,17 +29,17 @@ class T01_FizzBuzzDoit : public ::testing::Test {
 
 TEST_F(T01_FizzBuzzDoit, retournerFizz)
 {
-    TEST_CAS_SPECIAUX(FIZZ_NBRE,"Fizz");
+    TEST_CAS_SPECIAUX(FIZZ_NBRE,ATTENDU_FIZZ);
 }
 
 TEST_F(T01_FizzBuzzDoit, retournerBuzz)
 {
-    TEST_CAS_SPECIAUX(BUZZ_NBRE,"Buzz");
+    TEST_CAS_SPECIAUX(BUZZ_NBRE,ATTENDU_BUZZ);
 }
 
 TEST_F(T01_FizzBuzzDoit, retournerFizzBuzz)
 {
-    TEST_CAS_SPECIAUX(FIZZ_NBRE*BUZZ_NBRE,"FizzBuzz");
+    TEST_CAS_SPECIAUX(FIZZ_NBRE*BUZZ_NBRE,ATTENDU_FIZZBUZZ);
 }
 
 TEST_F(T01_FizzBuzzDoit, retournerNombre)

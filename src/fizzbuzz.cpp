@@ -13,11 +13,11 @@ string FizzBuzz::direUnNombre(const int nombre)
 {
     if (detectFizz(nombre))
         if (detectBuzz(nombre))
-            return "FizzBuzz";
+            return ATTENDU_FIZZBUZZ;
         else
-            return "Fizz";
+            return ATTENDU_FIZZ;
     else
         if (detectBuzz(nombre))
-            return "Buzz";
+            return ATTENDU_BUZZ;
     return to_string(nombre);
 }
