@@ -22,7 +22,7 @@
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>
-					<Add option="-O2" />
+					<Add option="-O3" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -70,6 +70,7 @@
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
+			<Add option="-std=c++11" />
 		</Compiler>
 		<Unit filename="include/fizzbuzz.h" />
 		<Unit filename="main.cpp">
@@ -78,13 +79,13 @@
 			<Option target="Aix" />
 		</Unit>
 		<Unit filename="src/fizzbuzz.cpp" />
-		<Unit filename="utest/include/utestglob.h" >
+		<Unit filename="utest/include/utestglob.h">
 			<Option target="utest" />
 		</Unit>
-		<Unit filename="utest/main.cpp" >
+		<Unit filename="utest/main.cpp">
 			<Option target="utest" />
 		</Unit>
-		<Unit filename="utest/src/T01_FizzBuzzDoit.cpp" >
+		<Unit filename="utest/src/T01_FizzBuzzDoit.cpp">
 			<Option target="utest" />
 		</Unit>
 		<Extensions />
