@@ -2,3 +2,4 @@ FizzBuzz.depend
 FizzBuzz.layout
 bin/
 obj/
+*.save
