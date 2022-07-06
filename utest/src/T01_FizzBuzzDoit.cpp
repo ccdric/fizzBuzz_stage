@@ -6,20 +6,17 @@
 using namespace std;
 
 #define ORIGINE (" ==> " + std::string(__PRETTY_FUNCTION__) + ", ligne = " + std::to_string(__LINE__) + " : \n")
+
 #define TEST_CAS_SPECIAUX(NOMBRE, ATTENDU) (testCasSpeciaux(NOMBRE, ATTENDU,ORIGINE))
 
 class T01_FizzBuzzDoit : public ::testing::Test {
 
  protected:
+    T01_FizzBuzzDoit(){}
 
-    T01_FizzBuzzDoit(){
-    }
+    virtual void SetUp(){}
 
-    virtual void SetUp() {
-    }
-
-    virtual void TearDown() {
-    }
+    virtual void TearDown(){}
 
     void testCasSpeciaux(int cas, const string & attendu, const string & position){
         SCOPED_TRACE("\n Origine  : " + position );

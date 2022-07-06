@@ -9,7 +9,7 @@ class FizzBuzz {
 
     public:
         FizzBuzz();
-        static const string direUnNombre(const int nombre);
+        static string direUnNombre(const int nombre);
 
 };
 
