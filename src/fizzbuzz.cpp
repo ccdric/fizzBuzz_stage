@@ -8,11 +8,11 @@ FizzBuzz::FizzBuzz(){}
 const string FizzBuzz::direUnNombre(const int nombre)
 {
     string resultat = "";
-    if (nombre % 3 == 0)
+    if (nombre % FIZZ_NBRE == 0)
         resultat="fizz";
-    if (nombre % 5 == 0)
+    if (nombre % BUZZ_NBRE == 0)
         resultat+="Buzz";
-    if (nombre % 3 != 0 && nombre % 5 != 0)
+    if (nombre % FIZZ_NBRE != 0 && nombre % BUZZ_NBRE != 0)
         resultat = to_string(nombre);
     return resultat;
 }
