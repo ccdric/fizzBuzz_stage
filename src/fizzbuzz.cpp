@@ -13,7 +13,7 @@ const string FizzBuzz::direUnNombre(const int nombre)
 {
     string resultat = "";
     if (detectFizz(nombre))
-        resultat="fizz";
+        resultat="Fizz";
     if (detectBuzz(nombre))
         resultat+="Buzz";
     if ( ! detectFizz(nombre) && ! detectBuzz(nombre))
